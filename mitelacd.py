@@ -5,9 +5,9 @@ import io
 import time
 
 
-HOST = "192.168.201.2"
-PORT = 15373
-
+HOST = "192.168.201.2" # Change to the IP Address for your Mitel main unit
+PORT = 15373 # The port of the Realtime ACD feed provided by the Mitel unit
+MITEL_DATA_FILE = 'mitel_data.json'
 
 agents = dict()
 groups = dict()
@@ -32,7 +32,7 @@ def isACDNumber(num):
 
 if __name__ == "__main__":
 	
-	json_data = open('mitel_data.json')
+	json_data = open(MITEL_DATA_FILE)
 	jsondata = json.load(json_data)
 	json_data.close()
 	
@@ -190,8 +190,8 @@ if __name__ == "__main__":
 			
 			
 			elif commandType == "R":
-				#keep alive data
-				bloopy = "no"
+				#keep alive data - we don't use this at the present time
+				pass
 			
 			
 			
@@ -207,10 +207,10 @@ if __name__ == "__main__":
 				allData['paths'] = paths
 				allData['lastUpdate'] = lastDataUpdate
 				
-				with open('mitel_data.json', 'w') as outfile:
+				with open(MITEL_DATA_FILE, 'w') as outfile:
 					json.dump(allData, outfile)
 					lastDataWrite = time.time()
-					print "Wrote to mitel_data.json"
+					print "Wrote to Mitel Data File"
 					print
 			
 		except:
