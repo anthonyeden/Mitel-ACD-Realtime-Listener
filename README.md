@@ -3,6 +3,7 @@ Mitel ACD Listener
 Developed by Anthony Eden / Hope Media Ltd
 
 Hope Media:    http://hopemedia.com.au/
+
 Anthony Eden:  http://mediarealm.com.au/
 
 Based on the specs provided by the
@@ -24,6 +25,7 @@ ICP at port 15373.
 
 REQUIREMENTS
 ------------------------------------------------------------------------------------------
+
  * Mitel ACD Real Time Events stream capable phone system
  * Python 2.7
  * Apple OS X or Windows (Linux has not been tested but may work)
@@ -31,6 +33,7 @@ REQUIREMENTS
 
 TESTING THE MITEL ACD REAL TIME EVENTS STREAM
 ------------------------------------------------------------------------------------------
+
 To test that this stream is available in your Mitel system, you can use a Telnet command:
 telnet 192.168.201.2 15373
 (ensure you substitute in the IP Address of your Mitel system)
@@ -48,6 +51,7 @@ details on the format of each data packet.
 
 PROGRAM SETUP
 ------------------------------------------------------------------------------------------
+
 0. Confirm your phone system meets the requirements.
 1. Download and install Python on your computer.
 2. Copy the mitelacd.py and mitel_data.json files to a directory on your computer
@@ -104,6 +108,7 @@ your application to ensure only data specific to your site is stored in the file
 
 RUNNING AS A BACKGROUND APPLICATION
 ------------------------------------------------------------------------------------------
+
 How you setup this program as a background application is up to you. Indeed, you don't
 even need to run it in the background. You could leave the terminal window running in a
 desktop session.
@@ -121,6 +126,7 @@ errors will be ignored.
 
 SUPPORT, WARRANTY, ETC.
 ------------------------------------------------------------------------------------------
+
 Please contact the developer directly for support. This software must not be distributed
 to third-parties without written consent. Enquiries for licensing should be directed to
 the developer.
